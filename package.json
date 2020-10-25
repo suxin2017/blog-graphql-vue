@@ -1,0 +1,14 @@
+{
+  "name": "graphql-blog",
+  "version": "1.0.0",
+  "private":"true",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "wsrun serve"
+  },
+  "workspaces":["app/blog-web","app/blog-server"],
+  "devDependencies": {
+    "wsrun": "^5.2.4"
+  }
+}
