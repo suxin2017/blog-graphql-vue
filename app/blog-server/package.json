@@ -4,16 +4,24 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
     "apollo-server": "^2.18.2",
-    "graphql": "^15.3.0"
+    "graphql": "^15.4.0"
   },
   "scripts": {
-    "serve": "nodemon ./index.js"
+    "serve": "nodemon --exec babel-node ./index.js",
+    "graphql:codegen": "graphql codegen"
   },
   "nodemonConfig": {
-    "delay": "2500"
+    "delay": "2500",
+    "verbose": false
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.1",
     "nodemon": "^2.0.5"
   }
 }
